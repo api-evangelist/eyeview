@@ -1,8 +1,24 @@
 aid: eyeview
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/eyeview.png
 name: Eyeview
-description: Eyeview is a company surfaced as a portfolio company of lightspeed-venture-partners and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Eyeview (Eyeview Digital) was a New York-based personalized and programmatic video advertising
+  technology company, surfaced in the API Evangelist network as a portfolio company of
+  lightspeed-venture-partners. As of this enrichment pass the company appears defunct - its primary domain
+  (eyeviewdigital.com) is registered on AWS nameservers but serves no website (no DNS A record) and no email
+  (no MX record), and no developer portal, API documentation, OpenAPI specification, SDKs, or public GitHub
+  spec surface could be located. No API artifacts could be harvested; this remains a defunct-company stub.
 url: https://raw.githubusercontent.com/api-evangelist/eyeview/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,9 +28,26 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+x-enrichment:
+  last_run: '2026-07-19'
+  status: no-surface
+  finding: >-
+    Provider defunct. eyeviewdigital.com has AWS NS records but no A record (dead website) and no MX record
+    (no email); eyeview.com redirects to an unrelated GoDaddy parked site. No website, developer portal,
+    API docs, OpenAPI, SDKs, or GitHub spec surface found. No artifacts derivable (no in-repo OpenAPI).
+  probed_hosts:
+  - {host: eyeviewdigital.com, https_status: '000', dns_a: false, dns_mx: false}
+  - {host: www.eyeviewdigital.com, https_status: '000'}
+  - {host: developer.eyeviewdigital.com, https_status: '000'}
+  - {host: api.eyeviewdigital.com, https_status: '000'}
 tags:
 - Company
+- Advertising
+- Video Advertising
+- Marketing Technology
+- Programmatic Advertising
+- Defunct
 apis: []
 maintainers:
 - FN: Kin Lane
